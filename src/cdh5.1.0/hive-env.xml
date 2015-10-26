@@ -1,0 +1,29 @@
+<configuration>
+    <property>
+		<name>JAVA_HOME</name>
+		<value>/home/hadoop/java</value>
+		<isDir>false</isDir>
+		<description>miaoshu</description>
+	</property>
+	
+	<property>
+		<name>HADOOP_HOME</name>
+		<value>/home/hadoop/cdh5/hadoop-2.3.0-cdh5.0.0</value>
+		<isDir>false</isDir>
+		<description>miaoshu</description>
+	</property>
+	
+	<property>
+		<name>HADOOP_CONF_DIR</name>
+		<value>/home/hadoop/cdh5/hadoop-2.3.0-cdh5.0.0/etc/hadoop</value>
+		<isDir>false</isDir>
+		<description>miaoshu</description>
+	</property>
+
+	<property>
+		<name>HIVE_HOME</name>
+		<value>/home/hadoop/cdh5/hive-0.12.0-cdh5.0.0</value>
+		<isDir>false</isDir>
+		<description>miaoshu</description>
+	</property>
+</configuration>

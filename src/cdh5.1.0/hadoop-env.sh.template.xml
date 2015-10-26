@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+ <property>
+    <name>JAVA_HOME</name>
+    <value>$JAVA_HOME</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+ <property>
+    <name>HADOOP_CONF_DIR</name>
+    <value>$HADOOP_CONF_DIR</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+ <property>
+   <name>HADOOP_CLASSPATH</name>
+   <value>$HADOOP_CLASSPATH:$f</value>
+   <isDir>false</isDir>
+   <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+ <property>
+   <name>HADOOP_CLASSPATH</name>
+   <value>$f</value>
+   <isDir>false</isDir>
+   <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+ <property>
+   <name>HADOOP_HEAPSIZE</name>
+   <value>$HADOOP_HEAPSIZE</value>
+   <isDir>false</isDir>
+   <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+ <property>
+   <name>HADOOP_OPTS</name>
+   <value>$HADOOP_OPTS -Djava.net.preferIPv4Stack=true</value>
+   <isDir>false</isDir>
+   <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+  <property>
+    <name>HADOOP_NAMENODE_OPTS</name>
+    <value>$HADOOP_NAMENODE_OPTS</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+  <property>
+    <name>HADOOP_DATANODE_OPTS</name>
+    <value>$HADOOP_DATANODE_OPTS</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+  <property>
+    <name>HADOOP_SECONDARYNAMENODE_OPTS</name>
+    <value>$HADOOP_SECONDARYNAMENODE_OPTS</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+  <property>
+    <name>HADOOP_CLIENT_OPTS</name>
+    <value>$HADOOP_CLIENT_OPTS</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+  <property>
+    <name>HADOOP_SECURE_DN_USER</name>
+    <value>${HADOOP_SECURE_DN_USER}</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+  <property>
+    <name>HADOOP_SECURE_DN_LOG_DIR</name>
+    <value>${HADOOP_LOG_DIR}/${HADOOP_HDFS_USER}</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+  <property>
+    <name>HADOOP_PID_DIR</name>
+    <value>${HADOOP_PID_DIR}</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+  <property>
+    <name>HADOOP_SECURE_DN_PID_DIR</name>
+    <value>${HADOOP_PID_DIR}</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+  <property>
+    <name>HADOOP_IDENT_STRING</name>
+    <value>$USER</value>
+    <isDir>false</isDir>
+    <description>每个Reduce Task需要的内存量默认1024m</description>
+ </property>
+</configuration>

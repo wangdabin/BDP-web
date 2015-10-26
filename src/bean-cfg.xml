@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- 声明所有的restClient -->
+	<bean id="hostClient" type="rest" class="com.bdp.rest.host.HostClient" />
+	<bean id="hadoopClient" type="rest" class="com.bdp.rest.hadoop.HadoopClient" />	
+	<bean id="hiveClient" type="rest" class="com.bdp.rest.hive.HiveClient" />	
+	<bean id="zookeeperClient" type="rest" class="com.bdp.rest.zookeeper.ZookeeperClient" />
+	<bean id="hbaseClient" type="rest" class="com.bdp.rest.hbase.HbaseClient" />	
+	<bean id="issuedClient" type="rest" class="com.bdp.rest.issued.IssuedClient" />	
+	<bean id="cpuClient" type="rest" class="com.bdp.rest.cpu.CpuClient" />	
+	<bean id="netClient" type="rest" class="com.bdp.rest.net.NetClient" />	
+	<bean id="memoryClient" type="rest" class="com.bdp.rest.memory.MemoryClient" />
+	<bean id="fsClient" type="rest" class="com.bdp.rest.fs.FsClient" />
+
+	<!-- 声明所有的Service -->
+	<bean id="hostsService" type="service" class="com.bdp.service.impl.HostsServiceImpl">
+		<property name="hostClient" ref="hostClient"></property>
+	</bean>
+	<bean id="servicesService" type="service" class="com.bdp.service.impl.ServicesServiceImpl" >
+		<property name="hostClient" ref="hostClient"></property>
+	</bean>
+	<bean id="zookeeperService" type="service" class="com.bdp.service.impl.ZookeeperServiceImpl" >
+		<property name="zookeeperClient" ref="zookeeperClient"></property>
+		<property name="issuedClient" ref="issuedClient"></property>
+	</bean>
+	<bean id="hadoopService" type="service" class="com.bdp.service.impl.HadoopServiceImpl">
+		<property name="hadoopClient" ref="hadoopClient"></property>
+		<property name="issuedClient" ref="issuedClient"></property>
+	</bean>
+	<bean id="hiveService" type="service" class="com.bdp.service.impl.HiveServiceImpl">
+		<property name="hiveClient" ref="hiveClient"></property>
+		<property name="issuedClient" ref="issuedClient"></property>
+	</bean>
+	<bean id="hBaseService" type="service" class="com.bdp.service.impl.HBaseServiceImpl">
+		<property name="hbaseClient" ref="hbaseClient"></property>
+	</bean>
+	<bean id="clusterService" type="service" class="com.bdp.service.impl.ClusterServiceImpl" >
+	
+	</bean>
+	<bean id="cpuService" type="service" class="com.bdp.service.impl.CpuServiceImpl">
+		<property name="cpuClient" ref="cpuClient"></property>
+	</bean>
+	<bean id="netService" type="service" class="com.bdp.service.impl.NetServiceImpl">
+		<property name="netClient" ref="netClient"></property>
+	</bean>
+	<bean id="memoryService" type="service" class="com.bdp.service.impl.MemoryServiceImpl">
+		<property name="memoryClient" ref="memoryClient"></property>
+	</bean>
+	<bean id="fsService" type="service" class="com.bdp.service.impl.FsServiceImpl">
+		<property name="fsClient" ref="fsClient"></property>
+	</bean>
+	<bean id="statisticService" type="service" class="com.bdp.service.impl.StatisticServiceImpl">
+	</bean>
+
+
+	<!-- 声明所有的Action -->
+	<bean id="hostsAction" type="action" class="com.bdp.web.action.HostsAction">
+		<property name="hostsService" ref="hostsService"></property>
+	</bean>
+	<bean id="servicesAction" type="action" class="com.bdp.web.action.ServicesAction">
+		<property name="servicesService" ref="servicesService"></property>
+	</bean>
+	<bean id="zookeeperAction" type="action" class="com.bdp.web.action.ZookeeperAction">
+		<property name="zookeeperService" ref="zookeeperService"></property>
+	</bean>
+	<bean id="hadoopAction" type="action" class="com.bdp.web.action.HadoopAction">
+		<property name="hadoopService" ref="hadoopService"></property>
+	</bean>
+	<bean id="hiveAction" type="action" class="com.bdp.web.action.HiveAction">
+		<property name="hiveService" ref="hiveService"></property>
+	</bean>
+	<bean id="hbaseAction" type="action" class="com.bdp.web.action.HBaseAction">
+		<property name="hBaseService" ref="hBaseService"></property>
+	</bean>
+	<bean id="clusterAction" type="action" class="com.bdp.web.action.ClusterAction">
+		<property name="clusterService" ref="clusterService"></property>
+	</bean>
+	<bean id="netAction" type="action" class="com.bdp.web.action.NetAction">
+		<property name="netService" ref="netService"></property>
+	</bean>
+	<bean id="cpuAction" type="action" class="com.bdp.web.action.CpuAction">
+		<property name="cpuService" ref="cpuService"></property>
+	</bean>
+	<bean id="memoryAction" type="action" class="com.bdp.web.action.MemoryAction">
+		<property name="memoryService" ref="memoryService"></property>
+	</bean>
+	<bean id="fsAction" type="action" class="com.bdp.web.action.FsAction">
+		<property name="fsService" ref="fsService"></property>
+	</bean>
+	<bean id="statisticAction" type="action" class="com.bdp.web.action.StatisticAction">
+		<property name="statisticService" ref="statisticService"></property>
+	</bean>
+
+
+
+
+
+</beans>
+
+

@@ -1,0 +1,58 @@
+<configuration>
+	<property>
+		<name>hive.exec.max.dynamic.partitions</name>
+		<value>30000</value>
+		<isDir>false</isDir>
+		<description>Maximum number of dynamic partitions allowed to be
+			created in total.</description>
+	</property>
+
+	<property>
+		<name>hive.exec.max.dynamic.partitions.pernode</name>
+		<value>6000</value>
+		<isDir>false</isDir>
+		<description>Maximum number of dynamic partitions allowed to be
+			created in each mapper/reducer node.</description>
+	</property>
+
+	<property>
+		<name>hive.exec.dynamic.partition</name>
+		<value>true</value>
+		<isDir>false</isDir>
+		<description>controls whether to connect to remove metastore server or
+			open a new metastore server in Hive Client JVM</description>
+	</property>
+
+	<property>
+		<name>hive.metastore.local</name>
+		<value>true</value>
+		<isDir>false</isDir>
+		<description>controls whether to connect to remove metastore server or
+			open a new metastore server in Hive Client JVM</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:mysql://172.16.6.153:3306/hive?createDatabaseIfNotExist=true
+		</value>
+		<isDir>false</isDir>
+		<description>miaoshu</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>com.mysql.jdbc.Driver</value>
+		<isDir>false</isDir>
+		<description>miaoshu</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>root</value>
+		<isDir>false</isDir>
+		<description>miaoshu</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionPassword</name>
+		<value>root</value>
+		<isDir>false</isDir>
+		<description>nimiaoshu</description>
+	</property>
+</configuration>
